@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventX Redirection</title>
+</head>
+<body>
+  <script type="text/javascript">
+  let parser = document.createElement('a');
+  let locale = ""
+  parser.href = window.location;
+  if (parser.hostname == "zh-cht.eventx.io"){
+    locale = "zh"
+  } else if (parser.hostname == "zh-cn.eventx.io"){
+    locale = "zh-hans"
+  } else if (parser.hostname == "id.eventx.io"){
+    locale = "id"
+  } else if (parser.hostname == "ja.eventx.io"){
+    locale = "ja"
+  } else if (parser.hostname == "ko.eventx.io"){
+    locale = "ko"
+  } else if (parser.hostname == "th.eventx.io"){
+    locale = "th"
+  }
+  window.location.replace("https://www.eventx.io/" + locale + parser.pathname + parser.search);
+  </script>
+</body>
+</html>
